@@ -1,0 +1,11 @@
+{
+  "name": "Sadek Mhreaz | Media Buyer",
+  "short_name": "Sadek Mhreaz",
+  "icons": [
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/assets/brand/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#0B0B0C",
+  "background_color": "#0B0B0C",
+  "display": "standalone"
+}
