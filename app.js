@@ -81,6 +81,12 @@
   window.addEventListener("scroll", updateToTop, { passive: true });
   updateToTop();
 
+  // ---------- Header turns to glass once the page leaves the top ----------
+  var header = document.querySelector(".site-header");
+  function updateHeader() { if (header) header.classList.toggle("is-scrolled", window.scrollY > 8); }
+  window.addEventListener("scroll", updateHeader, { passive: true });
+  updateHeader();
+
   var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // ---------- Hero: numbers count up from 0 ([data-count], optional data-decimals) ----------
