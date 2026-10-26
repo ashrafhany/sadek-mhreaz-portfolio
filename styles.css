@@ -241,7 +241,7 @@ html[dir="rtl"] .dash__big { text-align: end; }
 @keyframes float { to { translate: 0 -12px; } }
 
 /* Stats column */
-.hero__stats { list-style: none; margin: 0; padding: 0; align-self: center; }
+.hero__stats { position: relative; z-index: 2; list-style: none; margin: 0; padding: 0; align-self: center; }
 .hero__stats li { display: grid; grid-template-columns: 26px 1fr; column-gap: 12px; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--line); }
 .hero__stats li:last-child { border-bottom: 0; }
 .hero__stat-icon { grid-row: span 2; width: 24px; height: 24px; color: var(--accent); }
@@ -622,7 +622,9 @@ html[dir="rtl"] .hero__stats li { --dir: -1; }
   .navbar-nav .nav-link::after { display: none; }
   .navbar-nav .nav-link.active { color: var(--accent); }
   .hero__inner { grid-template-columns: 1fr; gap: 24px; min-height: 0; padding-top: calc(clamp(110px, 22vw, 200px) + var(--header-h)); }
-  .hero__visual { height: min(560px, 120vw); margin-top: 0; }
+  /* Stacked layout: the portrait ends on its own line instead of sliding under the stats */
+  .hero__visual { height: min(560px, 120vw); margin: 0; }
+  .hero__photo { -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent); mask-image: linear-gradient(to bottom, #000 82%, transparent); }
   .results { grid-template-columns: 1fr; max-width: 620px; }
   .split-head { grid-template-columns: 1fr; gap: 28px; }
   .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
