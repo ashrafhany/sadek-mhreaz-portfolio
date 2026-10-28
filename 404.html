@@ -7,17 +7,7 @@
   <meta name="description" content="Page not found.">
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#0B0B0C">
-  <script>
-    (function () {
-      var d = document.documentElement, saved = {};
-      try { saved.lang = localStorage.getItem("lang"); saved.theme = localStorage.getItem("theme"); } catch (e) {}
-      var q = new URLSearchParams(location.search).get("lang");
-      var lang = (q === "ar" || q === "en") ? q : saved.lang || ((navigator.language || "").slice(0, 2) === "ar" ? "ar" : "en");
-      var theme = saved.theme === "light" ? "light" : "dark";
-      d.lang = lang; d.dir = lang === "ar" ? "rtl" : "ltr";
-      d.setAttribute("data-theme", theme); d.setAttribute("data-bs-theme", theme);
-    })();
-  </script>
+  <script src="/lang.js"></script>
 
   <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">

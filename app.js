@@ -12,6 +12,13 @@
 
   // ---------- Language (EN / AR) ----------
   function setLang(lang) {
+    // Live site: each language has its own URL (/ar/...), so switching means going to the other address
+    if (/^https?:$/.test(location.protocol)) {
+      save("lang", lang);
+      var path = location.pathname.replace(/^\/ar(?=\/|$)/, "") || "/";
+      location.href = (lang === "ar" ? "/ar" + path : path) + location.hash;
+      return;
+    }
     root.lang = lang;
     root.dir = lang === "ar" ? "rtl" : "ltr";
     var ltr = document.getElementById("bs-css-ltr");

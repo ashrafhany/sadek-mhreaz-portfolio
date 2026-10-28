@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://sadek-mhreaz.vercel.app/sitemap.xml
